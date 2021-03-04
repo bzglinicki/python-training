@@ -70,8 +70,8 @@ age = 18
 "{1} ma {0} lat.".format(age, name)
 "{0} ma {1} lat. {0} jest więc młodym człowiekiem.".format(name, age)
 
-"{0} {1} kosztuje {2} zł.".format(5, "jabłek", 3)
-"{quantity} {item} kosztuje {price} zł.".format(
+"{0} {1} kosztuje {2:.2f} zł.".format(5, "jabłek", 3)
+"{quantity} {item} kosztuje {price:.2f} zł.".format(
             quantity = 5,
             item = "jabłek",
             price = 3
