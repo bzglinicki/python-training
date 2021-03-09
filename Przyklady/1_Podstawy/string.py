@@ -16,7 +16,8 @@
 
 # Stosowanie znaku \ wewnątrz łańcuchów
 "C:\\Users\\Bartek"
-r"C:\Users\Bartek"
+r"C:\Users\Bartek"   # "r" od
+R"C:\Users\Bartek"   # "raw"
 
 # Łańcuchy wieloliniowe
 '''
@@ -83,8 +84,8 @@ age = 18
 # Formatowanie - sposób III (zalecany) ###################################
 # Dokumentacja:
 # https://docs.python.org/3/reference/lexical_analysis.html#f-strings
-f"{name} ma {age} lat."
-F"{name} ma {age} lat."
+f"{name} ma {age} lat."   # "f" od
+F"{name} ma {age} lat."   # "formatted"
 
 # Można stosować dowolne wyrażenia, w tym wywołania funkcji
 f"{2 * 3}"

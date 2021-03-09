@@ -7,7 +7,7 @@ print() # Pusta linia dla estetyki
 
 bmi = m / (h**2)
 
-print("BMI = {0}".format(bmi))
+print(f"BMI = {bmi:.2f}")
 
 if bmi < 18.5:
    print("Niedowaga.")
