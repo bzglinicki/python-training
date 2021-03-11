@@ -2,11 +2,13 @@
 # Funkcje
 
 # Materiały:
+#    https://www.w3schools.com/python/python_functions.asp
 #    https://realpython.com/defining-your-own-python-function/
 
 # *************************************************************
 # Definiowanie i wywoływanie funkcji
 # *************************************************************
+
 def f():
     msg = "Funkcja f()"
     print(msg)
@@ -76,7 +78,7 @@ print()
 #    printPersonalData(name = "Jan", "Nowak", age = 25)
 #    printPersonalData("Jan", surname = "Nowak", 25)
 
-# Argumenty domyślne *****************************************
+# Wartości domyślne ******************************************
 
 def printPersonalDataDef(name = "Bartłomiej", surname = "Kowalski", age = 20):
     print(f"Imię i nazwisko: {name} {surname}")
@@ -99,12 +101,48 @@ print()
 printPersonalDataDef()
 print()
 
-# Przekazywanie przez wartość
+# Argumenty są przekazywane "przez wartość"!
 print("Przekazywanie przez wartość:")
 
 def inc(x):
-    x += 1
+    x += 1   # x = x + 1
 
 k = 5
 inc(k)
 print(k)
+
+# *************************************************************
+# Instrukcja return. Zwracanie wartości
+# *************************************************************
+
+def g():
+    print("Funkcja g() po raz pierwszy.")
+    return
+    print("Funkcja g() po raz drugi.")   # To się nie wykona!
+
+print("---> Główny program...")
+g()
+print("---> Główny program...")
+print()
+
+# Instrukcję return można wykorzystać np. do reagowania na niepoprawne
+# wartości argumentów
+def h(x):
+    if x < 0:     # Argument niepoprawny, nie rób nic.
+        return
+
+    if x > 100:   # Argument niepoprawny, nie rób nic.
+        return
+
+    print(x)
+
+h(-3)
+h(105)
+h(64)
+
+# Zwracanie wartości
+def message():
+    return "Pozdrawiam!"
+
+msg = message()
+print(msg)
